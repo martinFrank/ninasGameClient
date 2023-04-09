@@ -1,0 +1,14 @@
+com\github\martinfrank\games\rpgclient\control\Control.class
+com\github\martinfrank\games\rpgclient\queue\BroadcastConfig.class
+com\github\martinfrank\games\rpgclient\service\RpgService.class
+com\github\martinfrank\games\rpgclient\queue\RabbitMQConfig.class
+com\github\martinfrank\games\rpgclient\model\Model$1.class
+com\github\martinfrank\games\rpgclient\NinasGameClientApplication.class
+com\github\martinfrank\games\rpgclient\queue\RabbitMQConfig$MyFatalExceptionStrategy.class
+com\github\martinfrank\games\rpgclient\model\Model.class
+com\github\martinfrank\games\rpgclient\queue\ReceiveLogs.class
+com\github\martinfrank\games\rpgclient\view\View.class
+com\github\martinfrank\games\rpgclient\queue\RabbitMQReceiver.class
+com\github\martinfrank\games\rpgclient\queue\RabbitMQSender.class
+com\github\martinfrank\games\rpgclient\view\ControlPanel.class
+com\github\martinfrank\games\rpgclient\view\View$1.class

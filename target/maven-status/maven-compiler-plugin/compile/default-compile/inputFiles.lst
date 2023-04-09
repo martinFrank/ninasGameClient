@@ -1,0 +1,11 @@
+C:\Users\marti\IdeaProjects\ninasGameClient\src\main\java\com\github\martinfrank\games\rpgclient\model\Model.java
+C:\Users\marti\IdeaProjects\ninasGameClient\src\main\java\com\github\martinfrank\games\rpgclient\queue\RabbitMQSender.java
+C:\Users\marti\IdeaProjects\ninasGameClient\src\main\java\com\github\martinfrank\games\rpgclient\queue\RabbitMQReceiver.java
+C:\Users\marti\IdeaProjects\ninasGameClient\src\main\java\com\github\martinfrank\games\rpgclient\control\Control.java
+C:\Users\marti\IdeaProjects\ninasGameClient\src\main\java\com\github\martinfrank\games\rpgclient\queue\ReceiveLogs.java
+C:\Users\marti\IdeaProjects\ninasGameClient\src\main\java\com\github\martinfrank\games\rpgclient\view\View.java
+C:\Users\marti\IdeaProjects\ninasGameClient\src\main\java\com\github\martinfrank\games\rpgclient\queue\BroadcastConfig.java
+C:\Users\marti\IdeaProjects\ninasGameClient\src\main\java\com\github\martinfrank\games\rpgclient\queue\RabbitMQConfig.java
+C:\Users\marti\IdeaProjects\ninasGameClient\src\main\java\com\github\martinfrank\games\rpgclient\NinasGameClientApplication.java
+C:\Users\marti\IdeaProjects\ninasGameClient\src\main\java\com\github\martinfrank\games\rpgclient\view\ControlPanel.java
+C:\Users\marti\IdeaProjects\ninasGameClient\src\main\java\com\github\martinfrank\games\rpgclient\service\RpgService.java

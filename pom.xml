@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.github.martinfrank.ninasgame</groupId>
-    <artifactId>client</artifactId>
+    <artifactId>ninas-game-client</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -49,7 +49,7 @@
 
         <dependency>
             <groupId>com.github.martinfrank.ninasgame</groupId>
-            <artifactId>game-model</artifactId>
+            <artifactId>ninas-game-model</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
