@@ -1,4 +1,4 @@
-package com.github.martinfrank.games.rpgclient.model;
+package com.github.martinfrank.games.ninasgame.client.model;
 
 import org.springframework.stereotype.Component;
 

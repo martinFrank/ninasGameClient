@@ -1,4 +1,4 @@
-package com.github.martinfrank.games.rpgclient.service;
+package com.github.martinfrank.games.ninasgame.client.service;
 
 import com.github.martinfrank.ninasgame.model.map.Map;
 import org.slf4j.Logger;

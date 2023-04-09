@@ -1,4 +1,4 @@
-package com.github.martinfrank.games.rpgclient.queue;
+package com.github.martinfrank.games.ninasgame.client.queue;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;

@@ -1,4 +1,4 @@
-package com.github.martinfrank.games.rpgclient.queue;
+package com.github.martinfrank.games.ninasgame.client.queue;
 
 import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.Declarables;

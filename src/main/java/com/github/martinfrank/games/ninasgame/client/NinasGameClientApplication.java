@@ -1,4 +1,4 @@
-package com.github.martinfrank.games.rpgclient;
+package com.github.martinfrank.games.ninasgame.client;
 
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

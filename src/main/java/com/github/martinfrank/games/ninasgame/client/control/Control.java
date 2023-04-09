@@ -1,7 +1,7 @@
-package com.github.martinfrank.games.rpgclient.control;
+package com.github.martinfrank.games.ninasgame.client.control;
 
-import com.github.martinfrank.games.rpgclient.model.Model;
-import com.github.martinfrank.games.rpgclient.service.RpgService;
+import com.github.martinfrank.games.ninasgame.client.service.RpgService;
+import com.github.martinfrank.games.ninasgame.client.model.Model;
 import com.github.martinfrank.ninasgame.model.map.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

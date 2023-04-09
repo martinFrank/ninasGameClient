@@ -1,7 +1,7 @@
-package com.github.martinfrank.games.rpgclient.view;
+package com.github.martinfrank.games.ninasgame.client.view;
 
-import com.github.martinfrank.games.rpgclient.control.Control;
-import com.github.martinfrank.games.rpgclient.model.Model;
+import com.github.martinfrank.games.ninasgame.client.control.Control;
+import com.github.martinfrank.games.ninasgame.client.model.Model;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;

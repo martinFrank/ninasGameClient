@@ -1,4 +1,4 @@
-package com.github.martinfrank.games.rpgclient;
+package com.github.martinfrank.games.ninasgame.client;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

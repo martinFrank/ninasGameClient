@@ -1,7 +1,7 @@
-package com.github.martinfrank.games.rpgclient.view;
+package com.github.martinfrank.games.ninasgame.client.view;
 
-import com.github.martinfrank.games.rpgclient.control.Control;
-import com.github.martinfrank.games.rpgclient.model.Model;
+import com.github.martinfrank.games.ninasgame.client.control.Control;
+import com.github.martinfrank.games.ninasgame.client.model.Model;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
