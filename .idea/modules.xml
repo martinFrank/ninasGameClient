@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/client.iml" filepath="$PROJECT_DIR$/client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ninasGameModel/game-model.iml" filepath="$PROJECT_DIR$/../ninasGameModel/game-model.iml" />
     </modules>
   </component>
 </project>
