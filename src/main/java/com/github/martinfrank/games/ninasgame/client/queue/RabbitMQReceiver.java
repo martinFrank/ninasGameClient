@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component;
 @Component
 @RabbitListener(queues = "rabbitmq.queue", id = "listener")
 public class RabbitMQReceiver {
-    private static Logger logger = LogManager.getLogger(RabbitMQReceiver.class.toString());
+    private static final Logger LOGGER = LogManager.getLogger(RabbitMQReceiver.class);
 
     @RabbitHandler
     public void receiver(Map map) {
-        logger.info("Consuming Message with Map: " + map.getWidth()+"/"+map.getHeight());
+        LOGGER.info("Consuming Message with Map: " + map.getWidth()+"/"+map.getHeight());
     }
 }

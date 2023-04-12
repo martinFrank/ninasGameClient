@@ -9,13 +9,13 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
 @Component
-public class RpgService {
+public class NinasGameServerRestService {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(RpgService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(NinasGameServerRestService.class);
 
     private final WebClient webClient;
 
-    public RpgService(){
+    public NinasGameServerRestService(){
         webClient = WebClient.builder()
                 .baseUrl("http://localhost:8080")
 //                .defaultCookie("cookie-name", "cookie-value")

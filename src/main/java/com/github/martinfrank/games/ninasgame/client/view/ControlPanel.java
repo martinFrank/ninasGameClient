@@ -21,8 +21,12 @@ public class ControlPanel extends JPanel {
         loadMapButton.addActionListener(e -> control.loadMap());
         add(loadMapButton);
 
-        JButton gotToWoodButton = new JButton("go to wood");
-        gotToWoodButton.addActionListener(e -> control.goToWood());
-        add(gotToWoodButton);
+        JButton listenToQueueTheBasementButton = new JButton("listen to basement");
+        listenToQueueTheBasementButton.addActionListener(e -> control.goListenToTheBasement());
+        add(listenToQueueTheBasementButton);
+
+        JButton listenToQueueTheWoodsButton = new JButton("listen to woods");
+        listenToQueueTheWoodsButton.addActionListener(e -> control.goListenToTheWoods());
+        add(listenToQueueTheWoodsButton);
     }
 }

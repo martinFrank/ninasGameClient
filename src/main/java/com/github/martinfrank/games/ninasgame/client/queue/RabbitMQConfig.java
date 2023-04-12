@@ -17,6 +17,7 @@ import org.springframework.amqp.rabbit.listener.ConditionalRejectingErrorHandler
 import org.springframework.amqp.rabbit.support.ListenerExecutionFailedException;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -45,6 +46,9 @@ public class RabbitMQConfig {
     private Integer concurrentConsumers;
     @Value("${rabbitmq.max.concurrent.consumers}")
     private Integer maxConcurrentConsumers;
+
+//    @Autowired
+//    private ConnectionFactory connectionFactory;
     @Bean
     public Queue queue() {
         return new Queue(queueName, false);
@@ -70,6 +74,11 @@ public class RabbitMQConfig {
         connectionFactory.setUsername(username);
         connectionFactory.setPassword(password);
         return connectionFactory;
+    }
+
+    @Bean
+    public RabbitAdmin rabbitAdmin() {
+        return new RabbitAdmin(connectionFactory());
     }
 
 //    @Bean
