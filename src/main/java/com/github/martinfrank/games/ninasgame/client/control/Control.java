@@ -50,4 +50,6 @@ public class Control {
         rabbitQueueService.removeQueueFromListener(AREA_LISTENER_ID, BroadcastConfig.FANOUT_QUEUE_2_NAME);
         rabbitQueueService.addQueueToListener(AREA_LISTENER_ID,  BroadcastConfig.FANOUT_QUEUE_1_NAME);
     }
+
+
 }

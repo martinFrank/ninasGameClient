@@ -8,6 +8,9 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
+import java.nio.charset.Charset;
+import java.util.Base64;
+
 @Component
 public class NinasGameServerRestService {
 
@@ -26,6 +29,7 @@ public class NinasGameServerRestService {
         Map retrievedMap = webClient.get()
                 .uri("/maps/generate")
                 .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+                .header(HttpHeaders.AUTHORIZATION, createSecurityHeaders("test", "test") )
 //                .body(Mono.just(empl), Map.class) //bei post
                 .retrieve()
                 .bodyToMono(Map.class).block();
@@ -33,5 +37,11 @@ public class NinasGameServerRestService {
         return retrievedMap;
     }
 
+    String createSecurityHeaders(String username, String password){
 
+        String auth = username + ":" + password;
+        byte[] encodedAuth = Base64.getEncoder().encode(auth.getBytes() );
+        String authHeader = "Basic " + new String( encodedAuth );
+        return authHeader;
+    }
 }

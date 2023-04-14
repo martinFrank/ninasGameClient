@@ -1,16 +1,3 @@
-com\github\martinfrank\games\ninasgame\client\queue\ReceiveLogs.class
-com\github\martinfrank\games\ninasgame\client\view\View.class
-com\github\martinfrank\games\ninasgame\client\NinasGameClientApplication.class
-com\github\martinfrank\games\ninasgame\client\queue\RabbitMQReceiver.class
-com\github\martinfrank\games\ninasgame\client\service\RpgService.class
 com\github\martinfrank\games\ninasgame\client\queue\RabbitMQSender.class
-com\github\martinfrank\games\ninasgame\client\view\View$1.class
-com\github\martinfrank\games\ninasgame\client\model\Model$1.class
-com\github\martinfrank\games\ninasgame\client\model\Model.class
-com\github\martinfrank\games\ninasgame\client\queue\BroadcastConfig.class
-com\github\martinfrank\games\ninasgame\client\control\Control.class
-com\github\martinfrank\games\ninasgame\client\queue\RabbitMQConfig$MyFatalExceptionStrategy.class
-com\github\martinfrank\games\ninasgame\client\queue\RabbitMQConfig.class
 com\github\martinfrank\games\ninasgame\client\queue\RabbitQueueService.class
-com\github\martinfrank\games\ninasgame\client\view\ControlPanel.class
 com\github\martinfrank\games\ninasgame\client\queue\RabbitQueueServiceImpl.class
