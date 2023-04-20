@@ -13,6 +13,7 @@ public class NinasGameClientApplication {
 				.headless(false)
 				.web(WebApplicationType.NONE)
 				.run(args);
+
 	}
 
 }

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.event.WindowEvent;
 
 @Component
@@ -28,10 +29,6 @@ public class View {
 
     private final JFrame frame;
 
-//    public View(ModelView modelView, Control control) {
-//        this(null, modelView, control);
-//    }
-
     public View(ApplicationContext appContext, Model model, Control control) {
         this.appContext = appContext;
         this.model = model;
@@ -41,6 +38,8 @@ public class View {
     }
 
     private void createGui() {
+        frame.setPreferredSize(new Dimension(400, 300));
+        frame.getContentPane().add(new MainPanel(model, control), BorderLayout.CENTER);
         frame.getContentPane().add(new ControlPanel(model, control), BorderLayout.SOUTH);
         frame.addWindowListener(new java.awt.event.WindowAdapter() {
             @Override
@@ -52,13 +51,22 @@ public class View {
     }
 
     private void closeApp() {
-        frame.setVisible(false);
-        frame.dispose();
+        control.shutdown();
+        closeFrame();
+        stopApplication();
+    }
+
+    private void stopApplication() {
         final int returnCode = 0;
         if(appContext != null){
             SpringApplication.exit(appContext, () -> returnCode);
             System.exit(returnCode);
         }
+    }
+
+    private void closeFrame() {
+        frame.setVisible(false);
+        frame.dispose();
     }
 
     @PostConstruct

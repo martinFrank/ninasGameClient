@@ -13,6 +13,6 @@ public class RabbitMQReceiver {
 
     @RabbitHandler
     public void receiver(Map map) {
-        LOGGER.info("Consuming Message with Map: " + map.getWidth()+"/"+map.getHeight());
+        LOGGER.info("Consuming Message with Map: " + map);
     }
 }

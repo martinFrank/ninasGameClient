@@ -13,7 +13,8 @@ public class ReceiveLogs {
     public static final String AREA_LISTENER_ID = "area-listener";
 
 
-    @RabbitListener(queues = BroadcastConfig.FANOUT_QUEUE_1_NAME, id = AREA_LISTENER_ID)
+//    @RabbitListener(queues = BroadcastConfig.FANOUT_QUEUE_1_NAME, id = AREA_LISTENER_ID)
+    @RabbitListener(id = AREA_LISTENER_ID)
     public void receiveMessageFromFanout1(String message) {
         LOGGER.info("Received fanout message: {}", message);
     }
