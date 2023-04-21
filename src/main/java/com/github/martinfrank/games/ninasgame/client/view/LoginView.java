@@ -53,7 +53,7 @@ public class LoginView extends JPanel implements ViewReference {
                     control.createNewCharacter();
                 }
                 if(o instanceof Monster character){
-                    control.startGame(character);
+                    control.enterMap(character);
                 }
             }
         });

@@ -1,6 +1,5 @@
 package com.github.martinfrank.games.ninasgame.client.control;
 
-import com.github.martinfrank.games.ninasgame.client.queue.BroadcastConfig;
 import com.github.martinfrank.games.ninasgame.client.queue.RabbitQueueServiceImpl;
 import com.github.martinfrank.games.ninasgame.client.service.MapLoaderService;
 import com.github.martinfrank.games.ninasgame.client.service.NinasGameServerRestService;
@@ -52,19 +51,16 @@ public class Control {
     }
 
     public void loadMap() {
-        System.out.println("load map....");
-//        Map map = ninasGameServerRestService.loadMap2();
-//        System.out.println("loaded map: " + map);
     }
 
     public void goListenToTheBasement() {
-        rabbitQueueService.removeQueueFromListener(AREA_LISTENER_ID, BroadcastConfig.FANOUT_QUEUE_1_NAME);
-        rabbitQueueService.addQueueToListener(AREA_LISTENER_ID, BroadcastConfig.FANOUT_QUEUE_2_NAME);
+        model.getPlayer().setMapName("basement");
+        enterMap(model.getPlayer());
     }
 
     public void goListenToTheWoods() {
-        rabbitQueueService.removeQueueFromListener(AREA_LISTENER_ID, BroadcastConfig.FANOUT_QUEUE_2_NAME);
-        rabbitQueueService.addQueueToListener(AREA_LISTENER_ID, BroadcastConfig.FANOUT_QUEUE_1_NAME);
+        model.getPlayer().setMapName("meadow");
+        enterMap(model.getPlayer());
     }
 
 
@@ -87,13 +83,19 @@ public class Control {
         //FIXME create new Character
     }
 
-    public void startGame(Monster player) {
+    public void enterMap(Monster player) {
+        LOGGER.debug("enter map: {}, mapname: {}", player.getName(), player.getMapName());
         Map map = mapLoaderService.downloadMap(player.getMapName());
-        model.start(player, map);
-        listenToQueue(player.getMapName());
+        model.startMap(player, map);
+
+        listenToQueue(map.getQueueName());
         notifyViewReferences(new ViewNotification(ViewNotificationType.SHOW_MAP_PANEL, null));
     }
 
-    private void listenToQueue(String mapName) {
+    private void listenToQueue(String queueName) {
+        String str = "com.github.martinfrank.games.ninasgame.areaserver.fanout.exchange";
+        LOGGER.debug("change topic listening to {}", queueName);
+//        rabbitQueueService.removeAllListener(AREA_LISTENER_ID);
+        rabbitQueueService.listenToQueue(AREA_LISTENER_ID, queueName);
     }
 }
