@@ -11,6 +11,8 @@ import javax.swing.JComponent;
 import javax.swing.JPanel;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class MapView extends JPanel {
 
@@ -20,18 +22,21 @@ public class MapView extends JPanel {
 
     private OrthogonalRenderer orthogonalRenderer;
 
+    private List<TileLayer> tileLayers;
+
     public MapView(Model model, Control control) {
         this.model = model;
         this.control = control;
         orthogonalRenderer = new OrthogonalRenderer(model.getMap());
+        tileLayers = model.getMap().getLayers().stream().filter(map -> map instanceof TileLayer).map(map -> (TileLayer)map).collect(Collectors.toList());
         setPreferredSize(orthogonalRenderer.getMapSize());
+
     }
 
     @Override
     public void paint(Graphics g) {
         super.paint(g);
-        for(MapLayer mapLayer: model.getMap().getLayers()){
-            TileLayer tileLayer = (TileLayer) mapLayer;
+        for(TileLayer tileLayer: tileLayers){
             Graphics2D graphics2D = (Graphics2D) g;
             orthogonalRenderer.paintTileLayer(graphics2D, tileLayer);
         }

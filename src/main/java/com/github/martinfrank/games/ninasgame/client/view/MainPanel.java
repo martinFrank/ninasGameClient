@@ -40,7 +40,7 @@ public class MainPanel extends JPanel implements ViewReference {
             JScrollPane jScrollPane = new JScrollPane(new MapView(model, control));
             jScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
             jScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-            jScrollPane.setPreferredSize(new Dimension(500,300));
+            jScrollPane.setPreferredSize(getSize());
             setContent(jScrollPane);
             updateUI();
         }
